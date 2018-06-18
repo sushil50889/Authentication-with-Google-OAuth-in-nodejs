@@ -1,0 +1,12 @@
+<% include partials/header %>
+<div class="text-white mt-4 pt-4 w-75 mx-auto">
+    <p class="display-2 text-uppercase text-center pb-4">account Info</p>
+    <h1 class="h1 text-capitalize">profile ID : <%= currentUser.google.id %></h1>
+    <h1 class="h4 text-capitalize">name : <%= currentUser.google.name %></h1>
+    <h4 class="h4 text-capitalize">gender : <%= currentUser.google.gender %></h4>
+    <h4 class="h4 text-capitalize">dob : <%= currentUser.google.dob %></h4>
+    <h4 class="h4 text-capitalize">occupation : <%= currentUser.google.occupation %></h4>
+    <h4 class="h4 text-capitalize">relationship  : <%= currentUser.google.relationshipStatus %></h4>
+    <h4 class="h4 text-capitalize">profile URL : <%= currentUser.google.profileUrl %></h4>
+</div>    
+<% include partials/footer %>

@@ -1,0 +1,11 @@
+<div id="messages" class="position-absolute text-white bg-secondary text-center py-1 px-2 m-0">
+  <small>
+    <% Object.keys(messages).forEach(function (type) { %>
+      <ul class="<%= type %> list-unstyled">
+      <% messages[type].forEach(function (message) { %>
+        <li><%= message %></li>
+      <% }) %>
+      </ul>
+    <% }) %>
+  </small>
+</div>
