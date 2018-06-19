@@ -13,7 +13,7 @@ passport.use(new GoogleStrategy({
   }, async (accessToken, refreshToken, profile, done) => {
     try {
       // Should have full user profile over here
-      // console.log(profile);
+      console.log(profile);
       const existingUser = await User.findOne({ "google.id": profile.id });
       if (existingUser) {        
         return done(null, existingUser);
@@ -23,13 +23,13 @@ passport.use(new GoogleStrategy({
         // method: 'google',
         google: {
           id: profile.id,
-          email: profile.email,
+          email: profile._json.email,
           name: profile.displayName,
           gender: profile.gender,
-          occupation: profile. _json.occupation,
-          dob: profile. _json.birthday,
-          relationshipStatus: profile. _json.relationshipStatus,
-          profileUrl: profile. _json.url
+          occupation: profile._json.occupation,
+          dob: profile._json.birthday,
+          relationshipStatus: profile._json.relationshipStatus,
+          profileUrl: profile._json.url
         }
       });
   
