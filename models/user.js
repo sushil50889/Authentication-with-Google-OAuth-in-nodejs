@@ -6,6 +6,10 @@ var userSchema = new mongoose.Schema({
         id: {
           type: String
         },
+        email: {
+          type: String,
+          default: ''
+        },
         name: {
           type: String,
           default: ''

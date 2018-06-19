@@ -23,6 +23,7 @@ passport.use(new GoogleStrategy({
         // method: 'google',
         google: {
           id: profile.id,
+          email: profile.email,
           name: profile.displayName,
           gender: profile.gender,
           occupation: profile. _json.occupation,
