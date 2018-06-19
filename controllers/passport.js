@@ -9,7 +9,7 @@ const config = require('../config/index');
 passport.use(new GoogleStrategy({
     clientID: config.oauth.google.clientID,
     clientSecret: config.oauth.google.clientSecret,
-    callbackURL: "http://localhost:3200/users/auth/google/callback"
+    callbackURL: "https://protected-mountain-22094.herokuapp.com/users/auth/google/callback"
   }, async (accessToken, refreshToken, profile, done) => {
     try {
       // Should have full user profile over here
